@@ -13,7 +13,7 @@ Installation
 Add to your `mix.exs` file:
 
 ```elixir
-{:countries_i18n, "~> 0.0.2", only: :dev}
+{:countries_i18n, "~> 0.0.3"}
 ```
 
 Troubleshooting
@@ -32,6 +32,11 @@ mix countries.i18n.install
 
 This will write in your `priv/gettext` directory the `.pot` and `.po` files copied from the available directory in this library.
 
+Next step is open your view file (if you are using Phoenix Framework) or the file where you want to use it and:
+
+```elixir
+  use Countries.I18n
+```
 
 Contributing
 ------------

@@ -1,3 +1,4 @@
 priv/gettext
 _build/
 deps/
+doc/
