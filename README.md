@@ -13,8 +13,13 @@ Installation
 Add to your `mix.exs` file:
 
 ```elixir
-{:countries, "~> 1.0.0", only: :dev}
+{:countries_i18n, "~> 0.0.2", only: :dev}
 ```
+
+Troubleshooting
+---------------
+
+There are libraries like `countries` which are using yamerl as well. If there are issues, add in your project an override always giving preference to the dependency of `countries` (because it is going to be run inside of the system and this tool is run only once).
 
 Usage
 -----

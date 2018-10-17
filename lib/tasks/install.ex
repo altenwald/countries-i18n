@@ -4,7 +4,7 @@ defmodule Mix.Tasks.Countries.I18n.Install do
   @shortdoc "Installs all of the translations available for countries"
 
   def run(_) do
-    files = Path.wildcard("deps/countries-i18n/rails/locale/*/*.yml") ++
+    files = Path.wildcard("deps/countries_i18n/rails/locale/*/*.yml") ++
             Path.wildcard("rails/locale/*/*.yml")
     Enum.each(files, &process_file/1)
   end
