@@ -21,6 +21,8 @@ Troubleshooting
 
 There are libraries like `countries` which are using yamerl as well. If there are issues, add in your project an override always giving preference to the dependency of `countries` (because it is going to be run inside of the system and this tool is run only once).
 
+It's important to check what languages are you going to use and remove the rest because it's overwhelming the compile process dramatically.
+
 Usage
 -----
 
@@ -36,6 +38,18 @@ Next step is open your view file (if you are using Phoenix Framework) or the fil
 
 ```elixir
   use Countries.I18n
+```
+
+And then the function `country/1` will be available to be used with two-letters country codes:
+
+```elixir
+  country("ES")
+```
+
+Or dynamically:
+
+```elixir
+  country(country_code)
 ```
 
 Contributing
